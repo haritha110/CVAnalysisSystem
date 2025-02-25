@@ -7,7 +7,7 @@ import os
 from io import BytesIO
 
 # Set OpenAI API Key
-openai.api_key = os.getenv("OPENAI_API_KEY", "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")
+openai.api_key = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY")
 
 
 # Function to extract text from PDF
