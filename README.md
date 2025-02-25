@@ -1,7 +1,7 @@
 # 📄 CV Analysis Chatbot
 The CV Analysis System is a Streamlit-based application that processes multiple CVs (PDF &amp; DOCX) using OCR and LLMs to extract structured information. It allows users to upload resumes and query extracted data via a chatbot interface.
 
-# 🚀 Features
+## 🚀 Features
 
 - Upload and process multiple CVs (PDF & DOCX format)
 
@@ -13,80 +13,75 @@ The CV Analysis System is a Streamlit-based application that processes multiple 
 
 - Interactive Streamlit UI
 
-# 🛠️ Installation
+## 🛠️ Installation
 
 1. Clone the Repository
 
-
-git clone https://github.com/yourusername/CVAnalysisSystem.git
-cd CVAnalysisSystem
+   ```bash
+    git clone https://github.com/yourusername/CVAnalysisSystem.git
+    cd CVAnalysisSystem
 
 2. Create a Virtual Environment
-
-python -m venv .venv
-source .venv/bin/activate   # On Windows, use: .venv\Scripts\activate
+   
+     ```bash
+    python -m venv .venv
+    source .venv/bin/activate   # On Windows, use: .venv\Scripts\activate
 
 3. Install Dependencies
 
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
-4. Set Up API Keys (Optional)
+5. Set Up API Keys (Optional)
 
-If you're using OpenAI API, create a .env file and add:
+    If you're using OpenAI API, create a .env file and add:
+     ```bash
+    OPENAI_API_KEY=your_api_key_here
 
-OPENAI_API_KEY=your_api_key_here
+## ▶️ Usage
 
-▶️ Usage
+  Run the Streamlit App
 
-Run the Streamlit App
+   ```bash
+      streamlit run cvsystem.py
+  ```
 
-streamlit run cvsystem.py
+**Upload CVs and Query Data**
 
-Upload CVs and Query Data
+1. Open the web interface in your browser.
+2. Upload multiple resumes (PDF or DOCX).
+3. Query extracted information (e.g., "Find candidates skilled in Python").
 
-Open the web interface in your browser.
+## 📂 File Structure
 
-Upload multiple resumes (PDF or DOCX).
-
-Query extracted information (e.g., "Find candidates skilled in Python").
-
-📂 File Structure
-
+ ```bash
 CVAnalysisSystem/
-│── cvs_system.py        # Main application
-│── extractors.py        # Functions for text extraction (PDF/DOCX)
+│── cvsystem.py          # Main application
 │── requirements.txt     # Dependencies
 │── README.md            # Project documentation
 │── .env                 # API keys (ignored in .gitignore)
+ ```
 
-🤖 Tech Stack
+## 🤖 Tech Stack
 
-Frontend: Streamlit
+- Frontend: Streamlit
 
-Backend: Python
+- Backend: Python
 
-Libraries: PyMuPDF, python-docx, openai, streamlit
+- Libraries: PyMuPDF, python-docx, openai, streamlit
 
-🛠️ Troubleshooting
+## 🛠️ Troubleshooting
 
 1. DOCX Processing Error: "File is not a ZIP file"
 
-Ensure the uploaded file is a valid DOCX file.
+    - Ensure the uploaded file is a valid DOCX file.
 
-Use uploaded_file.getvalue() in extract_text_from_docx().
+    - Use `uploaded_file.getvalue()` in `extract_text_from_docx()` .
 
 2. LLM Processing Error: "Missing required arguments"
 
-Ensure model and prompt are passed correctly to the OpenAI API.
+    - Ensure `model` and `prompt` are passed correctly to the OpenAI API.
 
-🤝 Contributing
 
-Fork the repository.
-
-Create a new branch (feature-branch).
-
-Commit changes and push to GitHub.
-
-Submit a pull request.
 
 
