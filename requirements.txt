@@ -1,0 +1,8 @@
+streamlit~=1.42.2
+PyPDF2~=3.0.1
+pytesseract~=0.3.13
+pillow~=11.1.0
+fitz
+python-dotenv
+openai
+python-docx
